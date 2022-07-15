@@ -1,8 +1,14 @@
+export interface TemplateProps {
+  className?: string;
+}
+
 /**
- * @name __TEMPLATE__
+ * @name Template
  * @description tbd...
  */
-export const __TEMPLATE__ = () => {
+export const Template = (props: TemplateProps) => {
+  const { className } = props;
+
   // Hooks
 
   // Setup
@@ -16,8 +22,8 @@ export const __TEMPLATE__ = () => {
   // Short Circuits
 
   return (
-    <div>
-      <h2 className="text-2xl">__TEMPLATE__</h2>
+    <div className={className}>
+      <h2 className="text-2xl">Template Component</h2>
     </div>
   );
 };
